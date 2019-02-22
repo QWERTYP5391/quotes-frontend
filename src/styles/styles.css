@@ -1,0 +1,5 @@
+.card {
+    grid-area: card;
+    background-color: #1E90FF;
+    padding: 20px;
+}
