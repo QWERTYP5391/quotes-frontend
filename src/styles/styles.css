@@ -1,5 +1,14 @@
 .card {
     grid-area: card;
-    background-color: #1E90FF;
+    background-color: #ffffff;
     padding: 20px;
+}
+
+body {
+    display: grid;
+    grid-template-rows: 100fr 300fr;
+    grid-template-columns: 200px 200px;
+    background-color: #e9ebee;
+    padding: 20px;
+    margin: 0;
 }
