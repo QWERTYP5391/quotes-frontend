@@ -1,14 +1,18 @@
 .card {
-    grid-area: card;
     background-color: #ffffff;
     padding: 20px;
+
 }
 
 body {
     display: grid;
-    grid-template-rows: 100fr 300fr;
-    grid-template-columns: 200px 200px;
+    grid-template-rows: repeat(5, 1fr 2fr);
+    grid-template-columns: repeat(5, 1fr 2fr);
     background-color: #e9ebee;
     padding: 20px;
-    margin: 0;
+
+}
+
+.header {
+    grid-column: 1 / -1;
 }

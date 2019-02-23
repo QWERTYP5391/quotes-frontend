@@ -1,5 +1,5 @@
 import * as React from "react";
-import '../styles/styles.css'
+
 
 class QuoteCard extends React.Component {
 
@@ -10,7 +10,7 @@ class QuoteCard extends React.Component {
 
     }
 
-
+zL
 }
 
 export default QuoteCard;
