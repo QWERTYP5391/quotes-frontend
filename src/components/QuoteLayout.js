@@ -2,6 +2,7 @@ import * as React from "react";
 import Card from '@material-ui/core/Card';
 import QuoteService from "../services/QuoteService";
 import CardContent from "@material-ui/core/CardContent";
+import CardHeader from "@material-ui/core/es/CardHeader/CardHeader";
 
 const service = new QuoteService();
 
@@ -20,8 +21,8 @@ class QuoteLayout extends React.Component {
     render() {
         return this.state.items.map((item, index) =>
             <Card key={index} className="card">
+                <CardHeader title={item.title}/>
                 <CardContent><div dangerouslySetInnerHTML={{ __html: item.content }} /></CardContent>
-                {item.title}
             </Card>
         )
     }
