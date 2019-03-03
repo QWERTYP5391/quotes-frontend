@@ -5,7 +5,7 @@ class QuoteCard extends React.Component {
 
     render() {
         return (
-            <div className="card">This is a Quote Card</div>
+            <div className="card"></div>
         )
 
     }

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import './styles/styles.css'
-import QuoteCard from './components/QuoteCard'
+import QuoteLayout from './components/QuoteLayout'
 import Header from "./components/Header";
 
 
@@ -10,7 +10,7 @@ class App extends Component {
         return (
             <div id="container">
                 <Header/>
-                <QuoteCard/>
+                <QuoteLayout/>
             </div>
 
         );
