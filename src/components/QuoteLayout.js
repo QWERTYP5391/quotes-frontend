@@ -3,8 +3,7 @@ import Card from '@material-ui/core/Card';
 import QuoteService from "../services/QuoteService";
 import CardContent from "@material-ui/core/CardContent";
 import CardHeader from "@material-ui/core/es/CardHeader/CardHeader";
-
-const service = new QuoteService();
+import Grid from '@material-ui/core/Grid';
 
 class QuoteLayout extends React.Component {
 
@@ -19,17 +18,25 @@ class QuoteLayout extends React.Component {
 
 
     render() {
-        return this.state.items.map((item, index) =>
-            <Card key={index} className="card">
-                <CardHeader title={item.title}/>
-                <CardContent><div dangerouslySetInnerHTML={{ __html: item.content }} /></CardContent>
-            </Card>
-        )
+        return <Grid container spacing={24} alignContent='center'>{this.getCards()}</Grid>
     }
 
 
+    getCards() {
+        return this.state.items.map((item, index) =>
+            <Grid key={index} item xs={3}>
+                <Card>
+                    <CardHeader title={item.title}/>
+                    <CardContent>
+                        <div dangerouslySetInnerHTML={{__html: item.content}}/>
+                    </CardContent>
+                </Card>
+            </Grid>
+        )
+    }
+
     componentDidMount() {
-        service.getQuotes().then(res => res.json())
+        QuoteService.getQuotes().then(res => res.json())
             .then(
                 (result) => {
                     this.setState({
