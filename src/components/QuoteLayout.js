@@ -1,7 +1,7 @@
 import * as React from "react";
 import Card from '@material-ui/core/Card';
 import QuoteService from "../services/QuoteService";
-import {CardContent} from "@material-ui/core";
+import CardContent from "@material-ui/core/CardContent";
 
 const service = new QuoteService();
 
