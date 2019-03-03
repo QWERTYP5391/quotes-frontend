@@ -1,6 +1,7 @@
 import * as React from "react";
-import QuoteCard from './QuoteCard'
+import Card from '@material-ui/core/Card';
 import QuoteService from "../services/QuoteService";
+import {CardContent} from "@material-ui/core";
 
 const service = new QuoteService();
 
@@ -17,11 +18,13 @@ class QuoteLayout extends React.Component {
 
 
     render() {
-        return (<div className="card">{this.state.items.map((item, index) => (
-            item.content))}</div>);
+        return this.state.items.map((item, index) =>
+            <Card key={index} className="card">
+                <CardContent><div dangerouslySetInnerHTML={{ __html: item.content }} /></CardContent>
+                {item.title}
+            </Card>
+        )
     }
-
-
 
 
     componentDidMount() {
