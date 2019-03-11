@@ -8,7 +8,7 @@ import Header from "./components/Header";
 class App extends Component {
     render() {
         return (
-            <div id="container">
+            <div>
                 <Header/>
                 <QuoteLayout/>
             </div>
